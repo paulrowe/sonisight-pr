@@ -57,8 +57,8 @@ SAMPLE_NAME_TO_PATH = {
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
+        "https://your-frontend.vercel.app",
+        "https://www.sonisight.app",   # if you add custom domain later
     ],
     allow_credentials=True,
     allow_methods=["*"],
