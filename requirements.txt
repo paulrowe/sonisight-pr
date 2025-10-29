@@ -1,7 +1,8 @@
 fastapi
 uvicorn[standard]
-python-dotenv
-google-generativeai
+python-multipart
 pillow
-opencv-python
 numpy
+google-generativeai
+opencv-python-headless
+python-dotenv
