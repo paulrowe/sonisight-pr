@@ -53,13 +53,19 @@ SAMPLE_NAME_TO_PATH = {
     for p in cat
 }
 
-# CORS so your React site can call this API during dev
+# CORS so your React site(s) can call this API in dev/preview/prod
+# - Exact allow_origins for localhost and custom domains
+# - allow_origin_regex to include Vercel preview deployments for this project
+origins = [
+    "http://localhost:5173",
+    "https://sonisight-pr.vercel.app",
+    "https://www.sonisight.app",  # optional custom domain
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://sonisight-pr.vercel.app",
-        "https://www.sonisight.app",   # if you add custom domain later
-    ],
+    allow_origins=[o for o in origins if o],
+    allow_origin_regex=r"^https://sonisight-pr(-[a-z0-9-]+)?\.vercel\.app$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
