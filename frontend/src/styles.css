@@ -73,7 +73,11 @@ button.ghost { background: #2a313d; color: var(--text); }
 .probrow .bar { background: #222832; height: 10px; border-radius: 999px; overflow: hidden; }
 .probrow .bar .fill { height: 100%; background: var(--green); }
 
-.desc { width: 100%; border-collapse: collapse; }
+.desc { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 16px;
+}
 .desc td { padding: 8px; border-bottom: 1px solid #242a34; }
 .desc .k { width: 220px; color: var(--muted); }
 footer { margin-top: 18px; display: flex; align-items: center; gap: 8px; color: var(--muted); }
@@ -116,12 +120,10 @@ footer .disclaimer { margin-left: auto; }
   color: #ddd;
 }
 
-
 .app-logo {
-  width: 90px;
-  height: 90px;
+  width: 266px;
+  height: 106px;
   object-fit: contain;
-  filter: drop-shadow(0 0 6px rgba(0,255,255,0.3));
   user-select: none;
   border-radius: 15px;
 }

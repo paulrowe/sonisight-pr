@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ProbBars from './components/ProbBars.jsx'
 import Descriptors from './components/Descriptors.jsx'
-import logo from './assets/logo1.png'
+import logo from './assets/logo2.png'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
 
@@ -98,7 +98,7 @@ export default function App() {
         <img src={logo} alt="SoniSight logo" className="app-logo" />
         <h1>SoniSight (Prototype)</h1>
         <p className="subtitle">
-          Upload a breast ultrasound image → AI highlights areas of concern and estimates risk levels.
+          Upload a breast ultrasound image → OpenCV identifies areas of concern and AI estimates risk levels.
         </p>
       </header>
 
@@ -160,7 +160,13 @@ export default function App() {
                     className="sample"
                   />
                   <div className="sample-label">
-                    {folder === 'normal' ? 'Normal' : 'Suspicious'}
+                    {(() => {
+                      const base = name.replace(/\.[^/.]+$/, '');     // strip extension
+                      const match = base.match(/(\d+)/);              // get trailing number
+                      const n = match ? match[1].replace(/^0+/, '') : '';
+                      const category = folder === 'normal' ? 'Normal' : 'Suspicious';
+                      return n ? `${category} (${n})` : category;
+                    })()}
                   </div>
                 </div>
               );
@@ -223,11 +229,8 @@ export default function App() {
       </section>
 
       <footer>
-        <a href={`${API_URL}/about`} target="_blank" rel="noreferrer">About API</a>
-        <span>•</span>
-        <a href={`${API_URL}/docs`} target="_blank" rel="noreferrer">API Docs</a>
         <span className="disclaimer">
-          Prototype for educational purposes; not for clinical use.
+          Prototype for educational purposes and not for clinical use.
         </span>
       </footer>
     {loading && (

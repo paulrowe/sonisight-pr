@@ -1,9 +1,9 @@
-# main.py
 import numpy as np, base64
 import io
 import re
 import os
 import json
+# using  Gemini API for the AI (API key in .env)
 import google.generativeai as genai
 from typing import Dict
 
@@ -14,24 +14,25 @@ import cv2
 
 
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv()  # loads environment variables (mainly for the Gemini API key)
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
-# choosing model for API
+# choosing Gemini vers
 _GEMINI_MODEL = genai.GenerativeModel(
     model_name="gemini-2.5-flash",
     generation_config={
-        "temperature": 0,
-        "response_mime_type": "application/json" # ask for JSON only
+        "temperature": 0, 
+        "response_mime_type": "application/json"  # asking for JSON to not parse long text
     },
 )
 
 app = FastAPI(title="Ultrasound Analyzer Prototype")
 
 from fastapi.staticfiles import StaticFiles
+# static sample images for the frontend so testing without uploading own
 app.mount("/samples-static", StaticFiles(directory="samples"), name="samples")
 
-# --- Built-in sample images (update paths to your files) ---
+# built in sample images for those who don't want to download their own
 SAMPLES = {
     "normal": [
         "samples/normal/normal_01.png",
@@ -46,20 +47,19 @@ SAMPLES = {
         "samples/suspicious/suspicious_04.png",
     ],
 }
-# Flat name → path map so frontend can pass a single string like "normal_01.png"
+# so the frontend can just send "normal_01.png"
 SAMPLE_NAME_TO_PATH = {
     os.path.basename(p): p
     for cat in SAMPLES.values()
     for p in cat
 }
 
-# CORS so your React site(s) can call this API in dev/preview/prod
-# - Exact allow_origins for localhost and custom domains
-# - allow_origin_regex to include Vercel preview deployments for this project
+# CORS setup so React or other frontends can call this API
+#  Vercel preview URLs and the main deployed domain
 origins = [
     "http://localhost:5173",
     "https://sonisight-pr.vercel.app",
-    "https://www.sonisight.app",  # optional custom domain
+    "https://www.sonisight.app",  # for custom domains
 ]
 
 app.add_middleware(
@@ -71,11 +71,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ---------- OpenCV helpers (very simple placeholders to start) ----------
-def preprocess(bgr: np.ndarray) -> np.ndarray:  # takes BGR image array and returns grayscale image
-    # >>> UPDATED: crop out UI/borders (speckle near the probe, text, etc.)
+# OpenCV helpers
+
+# step 0: preprocessing
+def preprocess(bgr: np.ndarray) -> np.ndarray:
+    # converts BGR image to grayscale version thats more cleaned up
+    # grayscale, median blur for speckle, CLAHE for contrast
     h, w = bgr.shape[:2]
-    m = int(0.05 * min(h, w))  # 5% margin
+    m = int(0.05 * min(h, w))  # 5% margin 
     bgr = bgr[m:h-m, m:w-m] if h > 2*m and w > 2*m else bgr
 
     g = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
@@ -84,16 +87,19 @@ def preprocess(bgr: np.ndarray) -> np.ndarray:  # takes BGR image array and retu
     g = clahe.apply(g)
     return g
 
+# helper for converting a PIL image to PNG bytes (for sending to Gemini)
 def _pil_to_png_bytes(pil_img: Image.Image) -> bytes:
     buf = io.BytesIO()
     pil_img.save(buf, format="PNG")
     return buf.getvalue()
 
+
+# step 1: ROI (region of interest)
+# uses Gemini to find the main mass/lesion in the image by asking for a bounding box
+# if it can't find anything falls back to local saliency detector
 def get_roi_from_gemini(pil_img: Image.Image) -> list | None:
-    """
-    Ask Gemini for a bounding box [x,y,w,h] of the most prominent lesion.
-    Returns None if no mass is found or on any API error.
-    """
+    # ask Gem for bounding box [x,y,w,h] of the most prominent lesion
+    # returns None if no mass is found or on any API error
     prompt = (
         "You are a medical imaging specialist. "
         "Find the single most prominent mass/lesion in the ultrasound.\n\n"
@@ -106,7 +112,7 @@ def get_roi_from_gemini(pil_img: Image.Image) -> list | None:
 
     try:
         img_bytes = _pil_to_png_bytes(pil_img)
-        # Reuse your already-configured _GEMINI_MODEL (gemini-2.5-flash) but request text back.
+        # reusing  already-configured Gem model (gemini-2.5-flash) but request text back
         resp = _GEMINI_MODEL.generate_content(
             [
                 prompt,
@@ -115,7 +121,7 @@ def get_roi_from_gemini(pil_img: Image.Image) -> list | None:
             generation_config={"response_mime_type": "text/plain", "temperature": 0},
         )
         text = (resp.text or "").strip().replace("`", "")
-        # Fast path for "None"
+        # fast path for "None"
         if text.lower() == "none":
             print("AI-ROI: None")
             return None
@@ -132,26 +138,25 @@ def get_roi_from_gemini(pil_img: Image.Image) -> list | None:
         return [x, y, w, h]
 
     except Exception as e:
-        # Typical: 404 model name, 401 key missing, or quota errors.
+        # typical: 404 model name, 401 key missing, or quota errors
         print(f"Error in get_roi_from_gemini: {e}")
         return None
     
+# step 1 cont: local fallback ROI using saliency 
 def local_roi_from_saliency(bgr: np.ndarray) -> list | None:
-    """
-    Build a coarse saliency map and return a bounding box [x,y,w,h]
-    around the largest salient component (ignoring borders).
-    """
+    # if Gem can't fiind a mass, thos tries to pick out a likely lesion region using a saliency map
+    # it's looking for dark, blob-like areas that stand out from the background
     gray = preprocess(bgr)
     if gray is None or gray.size == 0:
         return None
 
-    # saliency: hypoechoic + blobness
+    # saliency: combine darkness and "blobness" (edges)
     dark = 1.0 - _normalize01(gray.astype(np.float32))
     g_blur = cv2.GaussianBlur(gray, (0, 0), 1.2)
     log = _normalize01(np.abs(cv2.Laplacian(g_blur, cv2.CV_32F, ksize=3)))
     S = _normalize01(0.7 * dark + 0.3 * log)
 
-    # ADAPTIVE THRESHOLD: pickier when the whole image is smooth (likely normal)
+    # adaptive threshold: if the whole image is super smooth, gets stricter (less likely to call something a mass)
     global_std = float(gray.std())
     p = 94 if global_std >= 22.0 else 96
     T = float(np.percentile(S, p))
@@ -168,14 +173,13 @@ def local_roi_from_saliency(bgr: np.ndarray) -> list | None:
 
     def ok(c):
         x, y, w, h = cv2.boundingRect(c)
-        # ignore those touching borders
+        # ignore anything touching the image borders (probes, labels, etc.)
         if x <= 2 or y <= 2 or (x + w) >= W - 2 or (y + h) >= H - 2:
             return False
-        # ignore very tiny regions
+        # ignore tiny regions (probably noise)
         if (w * h) < 0.003 * A_img:
             return False
-
-        # require a minimum inside-vs-outside contrast (prevents "always some blob")
+        # require at least a little contrast (so there's not always find “some blob”)
         tmp = np.zeros((H, W), np.uint8)
         cv2.drawContours(tmp, [c], -1, 255, -1)
         ring = cv2.dilate(tmp, np.ones((7, 7), np.uint8))
@@ -189,7 +193,6 @@ def local_roi_from_saliency(bgr: np.ndarray) -> list | None:
         contrast_out_in = max(0.0, (mean_out - mean_in) / (mean_out + 1e-6))
         if contrast_out_in < 0.06:  # require at least modest hypoechogenicity
             return False
-
         return True
 
     cnts = [c for c in cnts if ok(c)]
@@ -200,11 +203,14 @@ def local_roi_from_saliency(bgr: np.ndarray) -> list | None:
     x, y, w, h = cv2.boundingRect(c)
     return [int(x), int(y), int(w), int(h)]
 
+# step 2: segement likely lesion candidate from ROI 
 def segment_candidate(gray: np.ndarray):
-    # Otsu works well for these images; keep inverse because lesions tend to be darker
+    # try to find best candidate lesion in a grayscale ROI
+    # uses Otsu thresholding (since most lesion are darker), then picks the best contour using a hand-tuned scoring
+    # Otsu works well for these images to keep inverse because lesions tend to be darker
     _, th = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-    # stronger morphology
+    # better morphology to clean up speckle and fill gaps
     kernel = np.ones((5, 5), np.uint8)
     th = cv2.morphologyEx(th, cv2.MORPH_OPEN, kernel, iterations=2)
     th = cv2.morphologyEx(th, cv2.MORPH_CLOSE, kernel, iterations=2)
@@ -217,39 +223,33 @@ def segment_candidate(gray: np.ndarray):
     A_img = H * W
 
     def contour_score(c):
+        # hand-tuned scoring function that rewards compact, dark, solid blobs with clean margins
         area = cv2.contourArea(c)
         if area <= 0:
             return -1e9, None  # invalid
-
         x, y, w, h = cv2.boundingRect(c)
         touches_border = (x <= 0 or y <= 0 or (x + w) >= W - 1 or (y + h) >= H - 1)
         if touches_border:
             return -1e9, None
-
         area_frac = area / A_img
-        if area_frac < 0.005 or area_frac > 0.45:  # >>> UPDATED: allow smaller & larger true lesions
+        # allow a wide range of areas, but ignore tiny or enormous blobs
+        if area_frac < 0.005 or area_frac > 0.45:
             return -1e9, None
-
-        # solidity / aspect ratio filters
+        # solidity and aspect ratio filters (avoid weirdly stringy or hollow shapes)
         hull = cv2.convexHull(c)
         hull_area = cv2.contourArea(hull) + 1e-6
         solidity = area / hull_area
         ar = max(w / (h + 1e-6), h / (w + 1e-6))
-        if ar > 3.5 or solidity < 0.30:  # >>> slightly relaxed to avoid false negatives
+        if ar > 3.5 or solidity < 0.30:
             return -1e9, None
-
-        # build temporary mask to compute contrast and ring edge density
+        # margin analysis: draw a ring just outside the contour and look for edge density
         tmp_mask = np.zeros((H, W), np.uint8)
         cv2.drawContours(tmp_mask, [c], -1, 255, -1)
-
-        # ring for margin analysis
         ring = cv2.dilate(tmp_mask, np.ones((3, 3), np.uint8))
         ring = cv2.subtract(ring, tmp_mask)
-
         edges = cv2.Canny(gray, 30, 100)
         ring_edges = (edges[ring > 0] > 0).mean() if ring.sum() > 0 else 0.0
-
-        # contrast: mean intensity outside ring vs inside mask (lesions darker → higher contrast_out_in)
+        # contrast: mean intensity outside ring vs inside mask (lesions darker = higher contrast_out_in)
         inside_vals = gray[tmp_mask > 0]
         if inside_vals.size == 0:
             return -1e9, None
@@ -260,13 +260,10 @@ def segment_candidate(gray: np.ndarray):
         mean_in = float(inside_vals.mean())
         mean_out = float(outside_vals.mean())
         contrast_out_in = max(0.0, (mean_out - mean_in) / (mean_out + 1e-6))  # 0..1 approx
-
-        # circularity
+        # circularity is basically: how round is it?
         perim = cv2.arcLength(c, True)
         circularity = (4.0 * np.pi * area) / (perim * perim + 1e-6)
-
-        # >>> score: prefer compact (higher circularity), solid, darker-than-surrounding (higher contrast_out_in),
-        # and avoid very noisy borders (penalize extreme ring_edges)
+        # score: prefer round, solid, dark, and smooth. penalize noisy edges
         score = (
             1.0 * circularity +
             1.2 * contrast_out_in +
@@ -291,15 +288,16 @@ def segment_candidate(gray: np.ndarray):
     cv2.drawContours(mask, [c], -1, 255, -1)
     return c, mask
 
+#
+# step 2b: saliency-based fallback segmentation 
+#
 def saliency_candidate(gray: np.ndarray, p: int = 90):
-    """
-    Build a saliency map (same recipe as overlay) and return the best contour + mask.
-    Returns (cnt, mask) or (None, None) if nothing reliable is found.
-    """
+    # build a saliency map (same as overlay) and return the best contour + mask
+    # returns (cnt, mask) or (none, none) if nothing reliable is found
     if gray is None or gray.size == 0:
         return None, None
 
-    # re-use same saliency recipe
+    # re-using the same saliency recipe as in the ROI finder
     dark = 1.0 - _normalize01(gray.astype(np.float32))
     g_blur = cv2.GaussianBlur(gray, (0, 0), 1.2)
     log = _normalize01(np.abs(cv2.Laplacian(g_blur, cv2.CV_32F, ksize=3)))
@@ -311,7 +309,7 @@ def saliency_candidate(gray: np.ndarray, p: int = 90):
     T = float(np.percentile(S, p))
     th = (S >= T).astype(np.uint8) * 255
 
-    # clean up & remove tiny speckle
+    # clean up and remove tiny speckle
     th = cv2.morphologyEx(th, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8), iterations=1)
     th = cv2.morphologyEx(th, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8), iterations=1)
 
@@ -320,7 +318,7 @@ def saliency_candidate(gray: np.ndarray, p: int = 90):
     if not cnts:
         return None, None
 
-    # filter candidates
+    # filter candidates: ignore tiny or border-touching regions
     A_img = H * W
     kept = []
     for c in cnts:
@@ -340,30 +338,31 @@ def saliency_candidate(gray: np.ndarray, p: int = 90):
     return c, mask
 
 
+#
+# step 3: extract descriptors from a candidate contour 
+#
 def descriptors_from_cnt(gray: np.ndarray, cnt, mask) -> Dict:
-    """
-    Compute the same features you use in extract_descriptors but from a given contour/mask.
-    Returns a descriptor dict with mass_present=True (unless it fails no-mass gate).
-    """
-    # --- shape ---
+    # compute same features used in extract_descriptors but from a given contour/mask
+    # returns a descriptor dict with mass_present=True (unless it failes no-mass gate)
+    # shape
     area = float(cv2.contourArea(cnt))
     perim = float(cv2.arcLength(cnt, True))
     circularity = (4.0 * np.pi * area) / (perim * perim + 1e-6)
     shape = "round" if circularity >= 0.73 else ("oval" if circularity >= 0.60 else "irregular")
 
-    # --- margins ---
+    # margins
     edges = cv2.Canny(gray, 30, 100)
     dil = cv2.dilate(mask, np.ones((3, 3), np.uint8))
     ring = cv2.subtract(dil, mask)
     ring_edges = (edges[ring > 0] > 0).mean() if ring.sum() > 0 else 0.0
     margins = "smooth" if ring_edges < 0.18 else ("lobulated" if ring_edges < 0.38 else "spiculated")
 
-    # --- texture ---
+    # texture
     vals = gray[mask > 0]
     std = float(vals.std()) if vals.size else 0.0
     texture = "homogeneous" if std < 18 else ("mixed" if std < 33 else "heterogeneous")
 
-    # --- contrast ---
+    # contrast
     outside_band = cv2.dilate(ring, np.ones((7, 7), np.uint8))
     mean_in = float(vals.mean()) if vals.size else 0.0
     mean_out = float(gray[outside_band > 0].mean()) if outside_band.sum() > 0 else mean_in
@@ -372,7 +371,7 @@ def descriptors_from_cnt(gray: np.ndarray, cnt, mask) -> Dict:
     H, W = gray.shape
     area_frac = area / (H * W)
 
-    # same stronger no-mass gate you use
+    # use  same “no-mass” gate as in the main extractor: if it’s tiny, low-contrast, or super noisy, don’t call it a mass
     if ((area_frac < 0.006 and contrast_out_in < 0.08) or (ring_edges > 0.36)):
         return {
             "mass_present": False,
@@ -382,7 +381,7 @@ def descriptors_from_cnt(gray: np.ndarray, cnt, mask) -> Dict:
             "texture": "homogeneous",
         }
 
-    # cyst heuristic
+    # for cysts: if it’s very round, smooth, dark, and homogeneous, call it cyst-like
     looks_cystic = (circularity >= 0.78) and (ring_edges < 0.10) and (contrast_out_in >= 0.22) and (std < 16.0)
 
     return {
@@ -401,6 +400,7 @@ def descriptors_from_cnt(gray: np.ndarray, cnt, mask) -> Dict:
     }
 
 def _normalize01(x):
+    # normalizes an array to 0..1. used everywhere for contrast/saliency stuff
     x = x.astype(np.float32)
     return (x - x.min()) / (x.max() - x.min() + 1e-6)
 
@@ -410,6 +410,7 @@ def extract_descriptors(bgr: np.ndarray) -> Dict:
     cnt, mask = segment_candidate(gray)
 
     if cnt is None:
+        # if no candidate found, just say “no mass” and fill in defaults
         return {
             "mass_present": False,
             "img_quality": "unknown",
@@ -418,25 +419,25 @@ def extract_descriptors(bgr: np.ndarray) -> Dict:
             "texture": "homogeneous",
         }
 
-    # --- shape ---
+    # shape 
     area = float(cv2.contourArea(cnt))
     perim = float(cv2.arcLength(cnt, True))
     circularity = (4.0 * np.pi * area) / (perim * perim + 1e-6)
     shape = "round" if circularity >= 0.73 else ("oval" if circularity >= 0.60 else "irregular")
 
-    # --- margins / edges ---
+    # margins / edges 
     edges = cv2.Canny(gray, 30, 100)
     dil = cv2.dilate(mask, np.ones((3, 3), np.uint8))
     ring = cv2.subtract(dil, mask)
     ring_edges = (edges[ring > 0] > 0).mean() if ring.sum() > 0 else 0.0
     margins = "smooth" if ring_edges < 0.16 else ("lobulated" if ring_edges < 0.26 else "spiculated")
 
-    # --- texture ---
+    # texture 
     vals = gray[mask > 0]
     std = float(vals.std()) if vals.size else 0.0
     texture = "homogeneous" if std < 18 else ("mixed" if std < 33 else "heterogeneous")
 
-    # --- NEW: inside/outside contrast (darker lesions should have positive contrast_out_in)
+    # contrast inside vs outside
     outside_band = cv2.dilate(ring, np.ones((7, 7), np.uint8))
     mean_in = float(vals.mean()) if vals.size else 0.0
     mean_out = float(gray[outside_band > 0].mean()) if outside_band.sum() > 0 else mean_in
@@ -445,8 +446,7 @@ def extract_descriptors(bgr: np.ndarray) -> Dict:
     H, W = gray.shape
     area_frac = area / (H * W)
 
-    # >>> UPDATED: stronger no-mass gate
-    # tiny + low contrast OR very noisy border → call it no mass
+    # “no mass” gate: if it’s tiny & low contrast or the edge is super noisy, don’t call it a mass
     if ((area_frac < 0.006 and contrast_out_in < 0.08) or (ring_edges > 0.36)):
         return {
             "mass_present": False,
@@ -456,7 +456,7 @@ def extract_descriptors(bgr: np.ndarray) -> Dict:
             "texture": "homogeneous",
         }
 
-    # >>> NEW: benign cyst heuristic (very dark + compact + smooth)
+    # benign cyst: very round, smooth, and dark masses often look like cysts
     looks_cystic = (circularity >= 0.75) and (ring_edges < 0.10) and (contrast_out_in >= 0.25)
 
     return {
@@ -473,11 +473,12 @@ def extract_descriptors(bgr: np.ndarray) -> Dict:
         "cyst_like": bool(looks_cystic),
     }
 
+#
+# step 4: build prompt for Gemini to get probabilities 
+#
 def build_gemini_prompt(descriptors: Dict) -> str:
-    """
-    Ask for NORMAL vs SUSPICIOUS probabilities. Suspicious = any mass likely
-    needing follow-up (irregular/spiculated/heterogeneous or unclear).
-    """
+    # ask for normal vs sus probabilites (sus = any mass likely needing follow-up)
+    # irregular/spiculated/heterogeneous or unclear
     mass_present = descriptors.get("mass_present", False)
     shape = descriptors.get("shape", "none")
     margins = descriptors.get("margins", "none")
@@ -490,6 +491,7 @@ def build_gemini_prompt(descriptors: Dict) -> str:
     cyst_like = bool(descriptors.get("cyst_like", False))
     indet = bool(descriptors.get("indeterminate_roi", False))
 
+    # explicit prompt tells Gem how to triage the descriptors
     return f"""
 You are a triage assistant for breast ultrasound images.
 OUTPUT JSON ONLY with this schema:
@@ -530,6 +532,9 @@ EXAMPLES:
 JSON:
 """.strip()
 
+#
+# step 5: query Gemini for normal/suspicious triage 
+#
 def gemini_infer(descriptors: Dict) -> Dict:
     prompt = build_gemini_prompt(descriptors)
     try:
@@ -544,7 +549,7 @@ def gemini_infer(descriptors: Dict) -> Dict:
         n, s = n/total, s/total
         return {"probabilities": {"normal": round(n, 3), "suspicious": round(s, 3)}, "rationale": r}
     except Exception:
-        # Simple fallback from descriptors (2-class)
+        # if Gemini fails for any reason fall back to a simple rules-based triage
         if descriptors.get("indeterminate_roi"):
             return {"probabilities": {"normal": 0.75, "suspicious": 0.25},
                     "rationale": "No clearly delineated region, but features are subtle; recommend routine review."}
@@ -560,23 +565,18 @@ def gemini_infer(descriptors: Dict) -> Dict:
         return {"probabilities": {"normal": round(1 - score, 3), "suspicious": round(score, 3)},
                 "rationale": "Triage based on irregularity/margins/texture."}
 
-# ---------------------------- API endpoints -----------------------------
+# API endpoints
+
+# health check endpoint (for uptime monitoring or just to see if the server is alive) 
 @app.get("/health")
 def health():
     return {"ok": True}
 
-@app.get("/about")
-def about():
-    return {
-        "name": "UltrasoundAssist (Prototype)",
-        "sdg": "UN SDG 3: Good Health & Well-Being",
-        "disclaimer": "Prototype; not for clinical use. No PHI stored.",
-        "version": "0.2"
-    }
 
+# list available sample images for the frontend to display 
 @app.get("/samples")
 def list_samples():
-    """Return the available built-in sample images grouped by label."""
+    # return the available built-in sample images grouped by label
     return {
         "normal": [os.path.basename(p) for p in SAMPLES["normal"]],
         "suspicious": [os.path.basename(p) for p in SAMPLES["suspicious"]],
@@ -585,13 +585,16 @@ def list_samples():
 from fastapi import HTTPException, Query
 from typing import Optional, Literal
 
+# main prediction endpoint 
+# takes an uploaded image or a sample, runs the whole pipeline, and returns descriptors, triage, and overlay
 @app.post("/predict")
 async def predict(
     file: Optional[UploadFile] = File(None),
     source: Literal["live","sample"] = Query("live"),
     name: Optional[str] = Query(None),
 ):
-    # 0) Acquire image bytes either from upload (live) or disk (sample)
+    # step 0: get the image
+    # either from a live upload or from the built-in samples
     if source == "live":
         if file is None:
             raise HTTPException(status_code=400, detail="Upload a file when source=live.")
@@ -612,20 +615,19 @@ async def predict(
             pil = Image.open(io.BytesIO(data)).convert("RGB")
         except Exception:
             raise HTTPException(status_code=500, detail="Failed to load sample image.")
-        
 
-    # Keep the BGR version for OpenCV
+    # convert PIL image to OpenCV BGR (since all the OpenCV  expects BGR)
     bgr = cv2.cvtColor(np.array(pil), cv2.COLOR_RGB2BGR)
 
-    # 1) AI-assisted ROI
+    # step 1: try to find the ROI using Gemini 
     box = get_roi_from_gemini(pil)
 
-    # Fallback ROI if Gemini failed
+    # if Gemini can’t find anything, fall back to local saliency
     if box is None:
         box = local_roi_from_saliency(bgr)
 
+    # step 2: if still nothing, use conservative descriptors (no mass found)
     if box is None:
-        # still nothing → conservative "no mass" descriptors
         descriptors = {
             "mass_present": False,
             "img_quality": "ok",
@@ -636,7 +638,7 @@ async def predict(
     else:
         x, y, w, h = box
         H, W = bgr.shape[:2]
-        # clamp
+        # clamp to image bounds (sometimes AI or saliency gives slightly out-of-bounds boxes)
         if w <= 0 or h <= 0:
             box = None
         else:
@@ -656,6 +658,7 @@ async def predict(
                 "texture": "homogeneous",
             }
         else:
+            # adds a little padding to the ROI for safety ( masses are right up against the box edge sometimes)
             pad_w = int(w * 0.10); pad_h = int(h * 0.10)
             x1 = max(0, x - pad_w); y1 = max(0, y - pad_h)
             x2 = min(W, x + w + pad_w); y2 = min(H, y + h + pad_h)
@@ -670,15 +673,15 @@ async def predict(
                 descriptors = extract_descriptors(roi)
 
                 if not descriptors.get("mass_present", False):
-                    # Try a saliency-based segmentation INSIDE the ROI
+                    # if  main segmentation didn’t find anything, try a more aggressive saliency-based segmentation inside the ROI
                     gray_roi = preprocess(roi)
                     cnt_s, mask_s = saliency_candidate(gray_roi, p=90)  # start with 90th percentile
                     if cnt_s is None:
-                        # be a bit more aggressive if nothing found
+                        # try  lower threshold if nothing found 
                         cnt_s, mask_s = saliency_candidate(gray_roi, p=85)
 
                     if cnt_s is not None and mask_s is not None:
-                        # Compute features from the saliency contour
+                        # compute features from the saliency contour
                         desc2 = descriptors_from_cnt(gray_roi, cnt_s, mask_s)
                         if desc2.get("mass_present", False):
                             descriptors = desc2
@@ -686,38 +689,37 @@ async def predict(
                         else:
                             descriptors["indeterminate_roi"] = True
                     else:
-                        # Still nothing: keep it as no-mass, but mark indeterminate to soften the wording
+                        # still nothing: keep it as no-mass, but mark indeterminate
                         descriptors["indeterminate_roi"] = True
-    # 4) *** Run YOUR ORIGINAL text-only Gemini inference ***
+
+    # step 4: run Gemini inference on descriptors to get probabilities and rationale 
     try:
         result = gemini_infer(descriptors)
         probs = result["probabilities"]
         rationale = result["rationale"]
     except Exception:
-        # ... (your existing fallback logic) ...
+        # if all else fails just show fallback probabilities
         probs = {"normal": 0.33, "benign": 0.33, "malignant": 0.34}
         rationale = "AI rationale unavailable; showing fallback probabilities."
 
-    # 5) *** Your overlay logic is still great ***
+    # step 5: draw overlays for the frontend 
     overlay = bgr.copy()
-    # Only show a box if Gemini classifies as suspicious
+    # only show a box if Gemini classifies as “suspicious” (otherwise hide to avoid false positives)
     if box is not None and probs.get("suspicious", 0) >= 0.35:
         x, y, w, h = box
         cv2.rectangle(overlay, (x, y), (x + w, y + h), (0, 255, 0), 2)
     else:
-        # Hide ROI if classified normal
+        # hide ROI if classified as normal
         box = None
 
     ok, png = cv2.imencode(".png", overlay)
     overlay_b64 = base64.b64encode(png.tobytes()).decode("ascii") if ok else None
 
-    # ... (your existing contour drawing logic) ...
-    # This might even work better now!
     try:
         gray2 = preprocess(bgr)
         cnt, _mask = segment_candidate(gray2)
         if cnt is not None and descriptors.get("mass_present"):
-            # ...
+            # You could draw the contour here if you want!
             pass
     except Exception:
         pass
