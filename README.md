@@ -16,7 +16,7 @@ How It Works
 
 Tech Stack
 - Frontend: React + Vite (hosted on Vercel)
-- **Site Link**: https://sonisight-pr.vercel.app   
+- **Site Link**: https://sonisight.app   
 - Backend: FastAPI + OpenCV (hosted on Render)  
 - AI Model: Google Gemini 2.5 Flash  
 - Dataset: https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset
