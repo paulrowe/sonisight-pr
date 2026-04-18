@@ -58,14 +58,13 @@ SAMPLE_NAME_TO_PATH = {
 #  Vercel preview URLs and the main deployed domain
 origins = [
     "http://localhost:5173",
-    "https://sonisight-pr.vercel.app",
-    "https://www.sonisight.app",  # for custom domains
+    "https://www.sonisight.app",
+    "https://sonisight.app",  # for custom domains
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[o for o in origins if o],
-    allow_origin_regex=r"^https://sonisight-pr(-[a-z0-9-]+)?\.vercel\.app$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
