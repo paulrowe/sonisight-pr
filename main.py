@@ -19,7 +19,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # choosing Gemini vers
 _GEMINI_MODEL = genai.GenerativeModel(
-    model_name="gemini-3-flash-preview",
+    model_name="gemini-2.5-flash",
     generation_config={
         "temperature": 0, 
         "response_mime_type": "application/json"  # asking for JSON to not parse long text
