@@ -3,6 +3,7 @@ import io
 import re
 import os
 import json
+from pathlib import Path
 # using  Gemini API for the AI (API key in .env)
 import google.generativeai as genai
 from typing import Dict
@@ -29,22 +30,26 @@ _GEMINI_MODEL = genai.GenerativeModel(
 app = FastAPI(title="Ultrasound Analyzer Prototype")
 
 from fastapi.staticfiles import StaticFiles
+
+BASE_DIR = Path(__file__).resolve().parent
+SAMPLES_DIR = BASE_DIR / "samples"
+
 # static sample images for the frontend so testing without uploading own
-app.mount("/samples-static", StaticFiles(directory="samples"), name="samples")
+app.mount("/samples-static", StaticFiles(directory=str(SAMPLES_DIR)), name="samples")
 
 # built in sample images for those who don't want to download their own
 SAMPLES = {
     "normal": [
-        "samples/normal/normal_01.png",
-        "samples/normal/normal_02.png",
-        "samples/normal/normal_03.png",
-        "samples/normal/normal_04.png",
+        str(SAMPLES_DIR / "normal" / "normal_01.png"),
+        str(SAMPLES_DIR / "normal" / "normal_02.png"),
+        str(SAMPLES_DIR / "normal" / "normal_03.png"),
+        str(SAMPLES_DIR / "normal" / "normal_04.png"),
     ],
     "suspicious": [
-        "samples/suspicious/suspicious_01.png",
-        "samples/suspicious/suspicious_02.png",
-        "samples/suspicious/suspicious_03.png",
-        "samples/suspicious/suspicious_04.png",
+        str(SAMPLES_DIR / "suspicious" / "suspicious_01.png"),
+        str(SAMPLES_DIR / "suspicious" / "suspicious_02.png"),
+        str(SAMPLES_DIR / "suspicious" / "suspicious_03.png"),
+        str(SAMPLES_DIR / "suspicious" / "suspicious_04.png"),
     ],
 }
 # so the frontend can just send "normal_01.png"
@@ -53,6 +58,19 @@ SAMPLE_NAME_TO_PATH = {
     for cat in SAMPLES.values()
     for p in cat
 }
+
+# saved sample outputs so built-in demos can load instantly without recomputing
+SAMPLE_RESULTS_DIR = Path("sample_results")
+SAMPLE_CACHE = {}
+
+def load_sample_cache():
+    SAMPLE_CACHE.clear()
+    if SAMPLE_RESULTS_DIR.exists():
+        for file in SAMPLE_RESULTS_DIR.glob("*.json"):
+            with open(file, "r", encoding="utf-8") as f:
+                SAMPLE_CACHE[file.stem] = json.load(f)
+
+load_sample_cache()
 
 # CORS setup so React or other frontends can call this API
 #  Vercel preview URLs and the main deployed domain
@@ -575,10 +593,10 @@ def health():
 # list available sample images for the frontend to display 
 @app.get("/samples")
 def list_samples():
-    # return the available built-in sample images grouped by label
+    # return the available built-in sample images grouped by label (relative to SAMPLES_DIR so subfolder is included)
     return {
-        "normal": [os.path.basename(p) for p in SAMPLES["normal"]],
-        "suspicious": [os.path.basename(p) for p in SAMPLES["suspicious"]],
+        "normal": [os.path.relpath(p, SAMPLES_DIR).replace("\\", "/") for p in SAMPLES["normal"]],
+        "suspicious": [os.path.relpath(p, SAMPLES_DIR).replace("\\", "/") for p in SAMPLES["suspicious"]],
     }
 
 from fastapi import HTTPException, Query
@@ -605,7 +623,16 @@ async def predict(
     else:  # source == "sample"
         if not name:
             raise HTTPException(status_code=400, detail="Provide ?name=<sample_file.png> when source=sample.")
-        path = SAMPLE_NAME_TO_PATH.get(name)
+
+        # normalize: frontend may send "normal/normal_01.png" or just "normal_01.png"
+        lookup_name = os.path.basename(name.replace("\\", "/"))
+
+        sample_stem = Path(lookup_name).stem
+        cached_result = SAMPLE_CACHE.get(sample_stem)
+        if cached_result is not None:
+            return cached_result
+
+        path = SAMPLE_NAME_TO_PATH.get(lookup_name)     
         if not path or not os.path.exists(path):
             raise HTTPException(status_code=404, detail=f"Sample '{name}' not found.")
         with open(path, "rb") as f:
