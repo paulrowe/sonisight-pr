@@ -1,0 +1,2410 @@
+{
+  "train": [
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (22).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (22)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (72).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (72)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (59).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (59)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (142).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (142)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (180).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (180)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (41).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (41)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (21).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (21)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (83).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (83)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (203).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (203)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (95).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (95)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (3).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (3)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (22).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (22)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (139).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (139)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (54).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (54)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (40).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (40)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (37).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (37)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (9).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (9)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (78).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (78)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (165).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (165)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (103).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (103)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (115).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (115)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (200).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (200)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (87).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (87)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (76).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (76)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (77).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (77)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (49).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (49)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (168).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (168)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (129).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (129)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (118).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (118)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (11).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (11)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (141).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (141)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (207).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (207)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (138).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (138)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (82).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (82)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (5).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (5)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (7).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (7)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (3).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (3)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (86).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (86)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (101).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (101)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (31).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (31)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (72).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (72)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (137).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (137)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (205).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (205)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (156).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (156)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (114).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (114)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (25).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (25)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (128).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (128)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (175).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (175)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (4).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (4)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (70).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (70)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (24).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (24)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (23).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (23)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (112).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (112)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (40).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (40)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (92).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (92)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (12).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (12)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (28).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (28)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (98).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (98)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (98).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (98)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (36).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (36)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (80).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (80)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (89).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (89)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (65).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (65)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (24).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (24)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (92).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (92)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (146).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (146)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (189).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (189)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (169).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (169)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (100).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (100)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (151).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (151)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (60).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (60)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (23).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (23)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (83).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (83)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (195).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (195)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (17).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (17)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (172).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (172)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (28).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (28)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (44).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (44)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (158).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (158)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (75).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (75)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (173).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (173)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (93).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (93)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (121).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (121)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (55).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (55)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (64).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (64)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (4).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (4)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (206).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (206)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (47).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (47)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (119).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (119)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (154).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (154)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (84).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (84)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (198).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (198)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (128).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (128)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (209).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (209)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (56).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (56)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (51).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (51)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (50).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (50)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (94).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (94)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (25).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (25)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (76).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (76)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (61).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (61)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (69).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (69)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (107).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (107)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (170).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (170)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (14).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (14)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (140).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (140)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (176).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (176)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (188).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (188)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (18).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (18)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (32).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (32)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (32).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (32)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (136).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (136)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (133).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (133)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (1).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (1)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (6).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (6)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (97).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (97)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (131).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (131)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (122).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (122)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (111).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (111)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (87).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (87)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (102).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (102)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (191).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (191)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (46).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (46)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (8).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (8)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (174).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (174)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (2).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (2)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (48).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (48)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (58).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (58)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (160).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (160)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (108).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (108)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (147).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (147)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (157).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (157)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (123).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (123)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (34).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (34)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (53).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (53)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (108).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (108)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (74).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (74)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (164).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (164)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (29).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (29)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (39).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (39)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (159).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (159)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (81).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (81)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (208).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (208)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (43).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (43)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (44).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (44)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (78).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (78)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (101).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (101)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (210).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (210)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (192).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (192)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (54).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (54)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (15).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (15)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (19).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (19)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (95).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (95)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (171).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (171)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (73).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (73)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (18).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (18)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (131).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (131)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (126).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (126)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (90).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (90)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (48).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (48)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (9).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (9)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (115).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (115)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (125).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (125)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (59).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (59)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (117).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (117)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (71).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (71)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (5).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (5)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (65).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (65)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (132).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (132)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (193).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (193)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (38).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (38)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (145).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (145)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (16).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (16)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (112).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (112)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (110).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (110)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (27).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (27)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (13).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (13)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (77).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (77)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (89).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (89)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (133).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (133)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (132).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (132)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (199).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (199)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (148).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (148)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (29).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (29)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (30).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (30)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (20).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (20)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (10).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (10)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (53).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (53)_mask.png",
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (53)_mask_1.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (21).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (21)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (50).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (50)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (84).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (84)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (91).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (91)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (62).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (62)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (58).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (58)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (161).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (161)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (100).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (100)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (61).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (61)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (63).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (63)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (121).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (121)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (27).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (27)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (68).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (68)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (184).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (184)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (52).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (52)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (109).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (109)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (111).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (111)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (13).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (13)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (63).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (63)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (194).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (194)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (153).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (153)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (43).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (43)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (129).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (129)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (185).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (185)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (118).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (118)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (31).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (31)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (104).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (104)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (66).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (66)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (94).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (94)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (113).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (113)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (183).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (183)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (110).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (110)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (74).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (74)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (166).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (166)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (14).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (14)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (85).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (85)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (19).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (19)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (99).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (99)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (67).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (67)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (2).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (2)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (73).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (73)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (116).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (116)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (116).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (116)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (55).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (55)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (7).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (7)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (20).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (20)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (67).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (67)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (190).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (190)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (202).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (202)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (86).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (86)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (34).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (34)_mask.png"
+      ],
+      "klass": "normal"
+    }
+  ],
+  "val": [
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (127).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (127)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (134).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (134)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (167).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (167)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (114).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (114)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (186).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (186)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (90).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (90)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (123).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (123)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (33).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (33)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (10).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (10)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (35).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (35)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (41).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (41)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (64).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (64)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (11).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (11)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (143).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (143)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (88).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (88)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (187).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (187)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (16).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (16)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (81).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (81)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (96).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (96)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (33).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (33)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (82).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (82)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (17).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (17)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (181).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (181)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (177).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (177)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (56).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (56)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (99).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (99)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (120).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (120)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (62).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (62)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (26).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (26)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (117).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (117)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (120).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (120)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (42).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (42)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (130).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (130)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (204).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (204)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (79).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (79)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (135).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (135)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (37).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (37)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (52).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (52)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (127).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (127)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (179).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (179)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (178).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (178)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (201).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (201)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (68).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (68)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (109).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (109)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (69).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (69)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (45).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (45)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (85).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (85)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (163).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (163)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (182).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (182)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (38).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (38)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (70).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (70)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (45).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (45)_mask.png"
+      ],
+      "klass": "malignant"
+    }
+  ],
+  "test": [
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (125).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (125)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (35).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (35)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (102).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (102)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (105).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (105)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (26).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (26)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (88).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (88)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (124).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (124)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (39).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (39)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (71).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (71)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (197).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (197)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (57).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (57)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (93).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (93)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (79).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (79)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (1).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (1)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (162).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (162)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (36).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (36)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (60).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (60)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (152).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (152)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (8).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (8)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (113).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (113)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (80).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (80)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (150).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (150)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (15).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (15)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (122).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (122)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (30).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (30)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (107).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (107)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (149).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (149)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (51).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (51)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (57).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (57)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (144).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (144)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (196).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (196)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (42).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (42)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (104).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (104)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (103).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (103)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (91).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (91)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (155).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (155)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (126).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (126)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (12).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (12)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (124).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (124)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (130).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (130)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (105).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (105)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (49).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (49)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (97).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (97)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (75).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (75)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (106).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (106)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (96).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (96)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (66).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (66)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (46).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (46)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (106).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (106)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (119).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (119)_mask.png"
+      ],
+      "klass": "malignant"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (47).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/normal/normal (47)_mask.png"
+      ],
+      "klass": "normal"
+    },
+    {
+      "image_path": "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (6).png",
+      "mask_paths": [
+        "/Users/paulrowe/Documents/Dataset_BUSI_with_GT/malignant/malignant (6)_mask.png"
+      ],
+      "klass": "malignant"
+    }
+  ]
+}

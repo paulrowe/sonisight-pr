@@ -1,0 +1,47 @@
+{
+  "feature_names": [
+    "area",
+    "perimeter",
+    "equivalent_diameter",
+    "bbox_w",
+    "bbox_h",
+    "aspect_ratio",
+    "circularity",
+    "solidity",
+    "extent",
+    "eccentricity",
+    "major_axis",
+    "minor_axis",
+    "orientation_deg",
+    "mean_intensity",
+    "intensity_std",
+    "intensity_min",
+    "intensity_max",
+    "intensity_skew",
+    "intensity_p10",
+    "intensity_p90",
+    "ring_edge_density",
+    "contrast_out_in",
+    "surround_mean",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "classes": [
+    "normal",
+    "suspicious"
+  ],
+  "label_map": {
+    "normal": 0,
+    "benign": 1,
+    "malignant": 1
+  },
+  "n_estimators": 300,
+  "max_depth": null,
+  "min_samples_leaf": 2,
+  "class_weight": "balanced",
+  "random_state": 42
+}

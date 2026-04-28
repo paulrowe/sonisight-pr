@@ -1,0 +1,216 @@
+{
+  "cv": {
+    "cv_metrics": [
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0,
+        "confusion_matrix": [
+          [
+            19,
+            0
+          ],
+          [
+            0,
+            29
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0,
+        "confusion_matrix": [
+          [
+            19,
+            0
+          ],
+          [
+            0,
+            29
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0,
+        "confusion_matrix": [
+          [
+            19,
+            0
+          ],
+          [
+            0,
+            29
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0,
+        "confusion_matrix": [
+          [
+            18,
+            0
+          ],
+          [
+            0,
+            30
+          ]
+        ],
+        "roc_auc": 1.0
+      },
+      {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "precision_macro": 1.0,
+        "recall_macro": 1.0,
+        "f1_macro": 1.0,
+        "confusion_matrix": [
+          [
+            18,
+            0
+          ],
+          [
+            0,
+            29
+          ]
+        ],
+        "roc_auc": 1.0
+      }
+    ],
+    "cv_mean_f1": 1.0,
+    "feature_importances": {
+      "area": 0.02,
+      "perimeter": 0.02666666666666667,
+      "equivalent_diameter": 0.03,
+      "bbox_w": 0.03333333333333333,
+      "bbox_h": 0.03333333333333333,
+      "aspect_ratio": 0.0033333333333333335,
+      "circularity": 0.05,
+      "solidity": 0.02666666666666667,
+      "extent": 0.023333333333333334,
+      "eccentricity": 0.043333333333333335,
+      "major_axis": 0.03333333333333333,
+      "minor_axis": 0.04,
+      "orientation_deg": 0.043333333333333335,
+      "mean_intensity": 0.016666666666666666,
+      "intensity_std": 0.03,
+      "intensity_min": 0.02,
+      "intensity_max": 0.023333333333333334,
+      "intensity_skew": 0.006666666666666667,
+      "intensity_p10": 0.03,
+      "intensity_p90": 0.03,
+      "ring_edge_density": 0.03333333333333333,
+      "contrast_out_in": 0.0,
+      "surround_mean": 0.043333333333333335,
+      "glcm_contrast": 0.06333333333333334,
+      "glcm_dissimilarity": 0.05,
+      "glcm_homogeneity": 0.05,
+      "glcm_energy": 0.07666666666666666,
+      "glcm_correlation": 0.07666666666666666,
+      "glcm_asm": 0.043333333333333335
+    }
+  },
+  "test_with_ground_truth_mask": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "f1_macro": 1.0,
+    "confusion_matrix": [
+      [
+        20,
+        0
+      ],
+      [
+        0,
+        32
+      ]
+    ],
+    "roc_auc": 1.0
+  },
+  "test_with_predicted_mask": {
+    "accuracy": 0.5961538461538461,
+    "precision": 0.6486486486486487,
+    "recall": 0.75,
+    "f1": 0.6956521739130435,
+    "precision_macro": 0.5576576576576577,
+    "recall_macro": 0.55,
+    "f1_macro": 0.5478260869565217,
+    "confusion_matrix": [
+      [
+        7,
+        13
+      ],
+      [
+        8,
+        24
+      ]
+    ],
+    "roc_auc": 0.5679687499999999
+  },
+  "n_train": 239,
+  "n_test": 52,
+  "classes": [
+    "normal",
+    "suspicious"
+  ],
+  "feature_names": [
+    "area",
+    "perimeter",
+    "equivalent_diameter",
+    "bbox_w",
+    "bbox_h",
+    "aspect_ratio",
+    "circularity",
+    "solidity",
+    "extent",
+    "eccentricity",
+    "major_axis",
+    "minor_axis",
+    "orientation_deg",
+    "mean_intensity",
+    "intensity_std",
+    "intensity_min",
+    "intensity_max",
+    "intensity_skew",
+    "intensity_p10",
+    "intensity_p90",
+    "ring_edge_density",
+    "contrast_out_in",
+    "surround_mean",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "model_path": "artifacts/classifier.joblib"
+}

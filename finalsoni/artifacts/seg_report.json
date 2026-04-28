@@ -1,0 +1,264 @@
+{
+  "tuning": {
+    "best_mean_dice": 0.11272071960376887,
+    "best_params": {
+      "w_dark": 0.65,
+      "w_log": 0.2,
+      "w_edge": 0.15,
+      "sal_percentile": 88,
+      "open_ksize": 3,
+      "close_ksize": 7,
+      "open_iters": 1,
+      "close_iters": 1,
+      "min_area_frac": 0.003,
+      "max_area_frac": 0.55,
+      "min_solidity": 0.4,
+      "max_aspect_ratio": 4.0,
+      "border_margin": 2,
+      "min_contrast_out_in": 0.03,
+      "s_circularity": 1.0,
+      "s_contrast": 1.4,
+      "s_solidity": 0.5,
+      "s_edge_penalty": 0.6
+    },
+    "n_combos_tried": 60,
+    "top10": [
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.65,
+          "w_log": 0.2,
+          "w_edge": 0.15,
+          "open_ksize": 3,
+          "close_ksize": 7,
+          "min_area_frac": 0.003,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.4,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.11272071960376887,
+        "median_dice": 0.0019090593543908366,
+        "mean_iou": 0.06950408292710267
+      },
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.75,
+          "w_log": 0.2,
+          "w_edge": 0.15,
+          "open_ksize": 3,
+          "close_ksize": 7,
+          "min_area_frac": 0.003,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.3,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.11191431014563914,
+        "median_dice": 0.020223638053973043,
+        "mean_iou": 0.06889469118543312
+      },
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.65,
+          "w_log": 0.2,
+          "w_edge": 0.05,
+          "open_ksize": 3,
+          "close_ksize": 5,
+          "min_area_frac": 0.003,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.4,
+          "max_aspect_ratio": 5.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.10131269273609127,
+        "median_dice": 0.0,
+        "mean_iou": 0.06270299234793705
+      },
+      {
+        "params": {
+          "sal_percentile": 90,
+          "w_dark": 0.75,
+          "w_log": 0.3,
+          "w_edge": 0.05,
+          "open_ksize": 3,
+          "close_ksize": 5,
+          "min_area_frac": 0.005,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.3,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.06
+        },
+        "mean_dice": 0.10005305497086338,
+        "median_dice": 0.0,
+        "mean_iou": 0.061586972534274836
+      },
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.75,
+          "w_log": 0.3,
+          "w_edge": 0.05,
+          "open_ksize": 5,
+          "close_ksize": 7,
+          "min_area_frac": 0.005,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.4,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.09945428056850379,
+        "median_dice": 0.0,
+        "mean_iou": 0.0610452646008264
+      },
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.65,
+          "w_log": 0.2,
+          "w_edge": 0.15,
+          "open_ksize": 3,
+          "close_ksize": 5,
+          "min_area_frac": 0.005,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.3,
+          "max_aspect_ratio": 5.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.09614627209890758,
+        "median_dice": 0.0,
+        "mean_iou": 0.05873348079709798
+      },
+      {
+        "params": {
+          "sal_percentile": 92,
+          "w_dark": 0.55,
+          "w_log": 0.2,
+          "w_edge": 0.05,
+          "open_ksize": 3,
+          "close_ksize": 5,
+          "min_area_frac": 0.003,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.3,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.08729011536407794,
+        "median_dice": 0.0,
+        "mean_iou": 0.05162482707965897
+      },
+      {
+        "params": {
+          "sal_percentile": 90,
+          "w_dark": 0.65,
+          "w_log": 0.2,
+          "w_edge": 0.05,
+          "open_ksize": 5,
+          "close_ksize": 5,
+          "min_area_frac": 0.003,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.4,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.08601733257885255,
+        "median_dice": 0.0,
+        "mean_iou": 0.051367926863347874
+      },
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.55,
+          "w_log": 0.3,
+          "w_edge": 0.05,
+          "open_ksize": 5,
+          "close_ksize": 5,
+          "min_area_frac": 0.005,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.4,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.07907037936635701,
+        "median_dice": 0.0,
+        "mean_iou": 0.04741145537415215
+      },
+      {
+        "params": {
+          "sal_percentile": 88,
+          "w_dark": 0.75,
+          "w_log": 0.2,
+          "w_edge": 0.15,
+          "open_ksize": 5,
+          "close_ksize": 7,
+          "min_area_frac": 0.005,
+          "max_area_frac": 0.55,
+          "min_solidity": 0.4,
+          "max_aspect_ratio": 4.0,
+          "min_contrast_out_in": 0.03
+        },
+        "mean_dice": 0.07777908851511767,
+        "median_dice": 0.0,
+        "mean_iou": 0.046632867792347
+      }
+    ]
+  },
+  "test_lesion_only": {
+    "n_samples": 32,
+    "n_lesion": 32,
+    "n_normal": 0,
+    "detection_rate_lesion": 0.75,
+    "specificity_normal": null,
+    "mean_dice": 0.09602313935818046,
+    "median_dice": 0.0,
+    "mean_iou": 0.06061560012728132,
+    "median_iou": 0.0,
+    "mean_bbox_iou": 0.09057429266420225
+  },
+  "test_normal_only": {
+    "n_samples": 20,
+    "n_lesion": 0,
+    "n_normal": 20,
+    "detection_rate_lesion": 0.0,
+    "specificity_normal": 0.35,
+    "mean_dice": 0.0,
+    "median_dice": 0.0,
+    "mean_iou": 0.0,
+    "median_iou": 0.0,
+    "mean_bbox_iou": 0.0
+  },
+  "test_all_with_normal_penalty": {
+    "n_samples": 52,
+    "n_lesion": 32,
+    "n_normal": 20,
+    "detection_rate_lesion": 0.75,
+    "specificity_normal": 0.35,
+    "mean_dice": 0.06828312132137279,
+    "median_dice": 0.0,
+    "mean_iou": 0.04310442675717783,
+    "median_iou": 0.0,
+    "mean_bbox_iou": 0.06440838589454383
+  },
+  "config": {
+    "w_dark": 0.65,
+    "w_log": 0.2,
+    "w_edge": 0.15,
+    "sal_percentile": 88,
+    "open_ksize": 3,
+    "close_ksize": 7,
+    "open_iters": 1,
+    "close_iters": 1,
+    "min_area_frac": 0.003,
+    "max_area_frac": 0.55,
+    "min_solidity": 0.4,
+    "max_aspect_ratio": 4.0,
+    "border_margin": 2,
+    "min_contrast_out_in": 0.03,
+    "s_circularity": 1.0,
+    "s_contrast": 1.4,
+    "s_solidity": 0.5,
+    "s_edge_penalty": 0.6
+  }
+}
