@@ -552,36 +552,99 @@ JSON:
 #
 # step 5: query Gemini for normal/suspicious triage 
 #
-def gemini_infer(descriptors: Dict) -> Dict:
-    prompt = build_gemini_prompt(descriptors)
-    try:
-        resp = _GEMINI_MODEL.generate_content(prompt)
-        data = json.loads(resp.text.strip())
-        n = float(data.get("normal", 0.0))
-        s = float(data.get("suspicious", 0.0))
-        r = data.get("rationale", "")
-        total = n + s
-        if total <= 0:
-            raise ValueError("bad probs")
-        n, s = n/total, s/total
-        return {"probabilities": {"normal": round(n, 3), "suspicious": round(s, 3)}, "rationale": r}
-    except Exception:
-        # if Gemini fails for any reason fall back to a simple rules-based triage
+def rule_based_infer(descriptors: Dict) -> Dict:
+    """Generates triage probabilities and human-readable rationale without LLM."""
+    
+    # No mass case
+    if not descriptors.get("mass_present", False):
         if descriptors.get("indeterminate_roi"):
-            return {"probabilities": {"normal": 0.75, "suspicious": 0.25},
-                    "rationale": "No clearly delineated region, but features are subtle; recommend routine review."}
-        if not descriptors.get("mass_present", False):
-            return {"probabilities": {"normal": 0.95, "suspicious": 0.05},
-                    "rationale": "No discrete region detected; background appears homogeneous."}
-        score = 0.0
-        if descriptors.get("shape") == "irregular": score += 0.4
-        if descriptors.get("margins") == "spiculated": score += 0.4
-        if descriptors.get("texture") == "heterogeneous": score += 0.2
-        if descriptors.get("indeterminate_roi"): score += 0.15
-        score = max(0.05, min(0.98, score))
-        return {"probabilities": {"normal": round(1 - score, 3), "suspicious": round(score, 3)},
-                "rationale": "Triage based on irregularity/margins/texture."}
-
+            return {
+                "probabilities": {"normal": 0.70, "suspicious": 0.30},
+                "rationale": "No clearly delineated region identified, though some subtle features are present. Routine review recommended."
+            }
+        return {
+            "probabilities": {"normal": 0.95, "suspicious": 0.05},
+            "rationale": "No discrete mass detected; background tissue appears homogeneous."
+        }
+    
+    # Cyst-like case (benign appearance)
+    if descriptors.get("cyst_like"):
+        return {
+            "probabilities": {"normal": 0.75, "suspicious": 0.25},
+            "rationale": (
+                f"A round, smooth-bordered region with homogeneous internal echoes "
+                f"(circularity {descriptors['circularity']:.2f}, contrast {descriptors['contrast_out_in']:.2f}) "
+                f"suggests a benign cystic appearance."
+            )
+        }
+    
+    # Score-based for actual masses
+    shape = descriptors.get("shape", "none")
+    margins = descriptors.get("margins", "none")
+    texture = descriptors.get("texture", "homogeneous")
+    
+    # Suspicion score (0-1)
+    score = 0.15  # baseline for any detected mass
+    
+    suspicious_findings = []
+    benign_findings = []
+    
+    if shape == "irregular":
+        score += 0.35
+        suspicious_findings.append("irregular shape")
+    elif shape == "oval":
+        score += 0.10
+        benign_findings.append("oval shape")
+    elif shape == "round":
+        benign_findings.append("round shape")
+    
+    if margins == "spiculated":
+        score += 0.35
+        suspicious_findings.append("spiculated margins")
+    elif margins == "lobulated":
+        score += 0.15
+        suspicious_findings.append("lobulated margins")
+    elif margins == "smooth":
+        benign_findings.append("smooth margins")
+    
+    if texture == "heterogeneous":
+        score += 0.20
+        suspicious_findings.append("heterogeneous internal echoes")
+    elif texture == "mixed":
+        score += 0.08
+    
+    if descriptors.get("indeterminate_roi"):
+        score += 0.10
+    
+    # Clamp
+    score = max(0.05, min(0.95, score))
+    
+    # Build rationale based on what was found
+    if suspicious_findings and not benign_findings:
+        rationale = (
+            f"Detected mass shows {', '.join(suspicious_findings)}, "
+            f"features that typically warrant follow-up evaluation."
+        )
+    elif benign_findings and not suspicious_findings:
+        rationale = (
+            f"Detected mass shows {', '.join(benign_findings)} with "
+            f"no concerning features identified."
+        )
+    elif suspicious_findings and benign_findings:
+        rationale = (
+            f"Mixed features observed: {', '.join(suspicious_findings)} "
+            f"alongside {', '.join(benign_findings)}. Clinical correlation recommended."
+        )
+    else:
+        rationale = "Mass detected with non-specific features; routine review recommended."
+    
+    return {
+        "probabilities": {
+            "normal": round(1 - score, 3),
+            "suspicious": round(score, 3),
+        },
+        "rationale": rationale,
+    }
 # API endpoints
 
 # health check endpoint (for uptime monitoring or just to see if the server is alive) 
@@ -720,7 +783,7 @@ async def predict(
 
     # step 4: run Gemini inference on descriptors to get probabilities and rationale 
     try:
-        result = gemini_infer(descriptors)
+        result = rule_based_infer(descriptors)
         probs = result["probabilities"]
         rationale = result["rationale"]
     except Exception:
