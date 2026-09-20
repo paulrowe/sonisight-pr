@@ -6,4 +6,3 @@ numpy
 google-generativeai
 opencv-python-headless
 python-dotenv
-

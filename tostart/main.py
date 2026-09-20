@@ -29,6 +29,26 @@ _GEMINI_MODEL = genai.GenerativeModel(
 
 app = FastAPI(title="Ultrasound Analyzer Prototype")
 
+# ---------------------------------------------------------------------------
+# hybrid v2 pipeline (structured Gemini assessment + real CV features + fusion)
+# Controlled by env var SONI_MODE:
+#   legacy       -> original v1 path below (default, so nothing breaks)
+#   hybrid_v2    -> full v2 pipeline
+#   gemini_only  -> v2 detection, no CV features   (ablation arm)
+#   opencv_only  -> CV proposer + CV features only  (ablation arm)
+# ---------------------------------------------------------------------------
+SONI_MODE = os.getenv("SONI_MODE", "legacy")
+_V2 = None
+if SONI_MODE != "legacy":
+    import pipeline_v2 as _V2
+
+
+def _gemini_generate(parts):
+    """Adapter so pipeline_v2 can call Gemini without importing genai itself."""
+    resp = _GEMINI_MODEL.generate_content(parts)
+    return (resp.text or "").strip()
+
+
 from fastapi.staticfiles import StaticFiles
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -736,6 +756,20 @@ async def predict(
 
     # convert PIL image to OpenCV BGR (since all the OpenCV  expects BGR)
     bgr = cv2.cvtColor(np.array(pil), cv2.COLOR_RGB2BGR)
+
+    # --- hybrid v2 path -------------------------------------------------
+    if _V2 is not None:
+        gen = None if SONI_MODE == "opencv_only" else _gemini_generate
+        out = _V2.analyze(bgr, pil, generate=gen, mode=SONI_MODE)
+        overlay = bgr.copy()
+        if out.get("roi_box"):
+            x, y, w, h = out["roi_box"]
+            cv2.rectangle(overlay, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        ok, png = cv2.imencode(".png", overlay)
+        out["overlay_png_base64"] = (
+            base64.b64encode(png.tobytes()).decode("ascii") if ok else None)
+        return out
+    # --------------------------------------------------------------------
 
     # step 1: try to find the ROI using Gemini 
     box = get_roi_from_gemini(pil)
